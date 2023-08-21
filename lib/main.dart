@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/responsiveness/mobile_screen_layout.dart';
+import 'package:instagram/responsiveness/responsive_layout.dart';
+import 'package:instagram/responsiveness/web_screen_layout.dart';
 import 'package:instagram/utils/colors.dart';
 
 void main() {
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: mobileBackgroundColor),
-      home: Scaffold(),
+      home: const ResponsiveLayout(mobileScreenLayout: MobileScreenLayout(), webScreenLayout:WebScreenLayout() ,),
     );
   }
 }
